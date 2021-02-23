@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var chatAppLabel: CLTypingLabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        chatAppLabel.text = "Chat App"
     }
     
+
     
     @IBAction func loginRedirect(_ sender: Any) {
     }
