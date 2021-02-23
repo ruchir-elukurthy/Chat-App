@@ -6,21 +6,27 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     @IBOutlet weak var userEmailAddress: UITextField!
     
     @IBOutlet weak var userPassword: UITextField!
     
     @IBAction func registerButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToChat", sender: self)
+        if let email = userEmailAddress.text, let password = userPassword.text {
+            
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                }
+                else {
+                    self.performSegue(withIdentifier: "goToChat", sender: self)
+                }
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
