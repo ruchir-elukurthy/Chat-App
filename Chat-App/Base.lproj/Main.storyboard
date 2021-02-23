@@ -30,6 +30,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginRedirect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOY-bL-N1J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yco-p6-fvV">
                                 <rect key="frame" x="26" y="813" width="363" height="49"/>
@@ -38,6 +41,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerRedirect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWt-pM-XuM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="DhB-xK-oC0">
             <objects>
-                <viewController id="MCx-AD-oiT" sceneMemberID="viewController">
+                <viewController id="MCx-AD-oiT" customClass="RegisterViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y6w-vc-GVR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,20 +81,27 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButton:" destination="MCx-AD-oiT" eventType="touchUpInside" id="sCJ-TD-jLJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNx-vU-lkd"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                     </view>
+                    <connections>
+                        <outlet property="userEmailAddress" destination="AfD-U9-e4f" id="9Jf-Zb-81j"/>
+                        <outlet property="userPassword" destination="S2D-il-oVE" id="bhC-yP-Wdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhb-iT-vx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650.72463768115949" y="91.741071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="2Wv-p6-rdA">
             <objects>
-                <viewController id="rD0-OJ-8cn" sceneMemberID="viewController">
+                <viewController id="rD0-OJ-8cn" customClass="LoginViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ARt-o5-lpM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,20 +125,27 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="userlLogin:" destination="rD0-OJ-8cn" eventType="touchUpInside" id="zRv-vU-qlg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ms-2Q-2nB"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
+                    <connections>
+                        <outlet property="userEmailAddress" destination="nla-8j-9jD" id="T29-jq-nyp"/>
+                        <outlet property="userPassword" destination="Eiy-1v-uet" id="wNh-qm-rNc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twX-nw-9Vu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1365.217391304348" y="91.741071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="XH5-cb-QNw">
             <objects>
-                <viewController id="8of-Lc-qsx" sceneMemberID="viewController">
+                <viewController id="8of-Lc-qsx" customClass="ChatViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aHU-e8-bOx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,12 +169,19 @@
                                 <state key="normal" title="Go">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="goButton:" destination="8of-Lc-qsx" eventType="touchUpInside" id="IQP-g1-pv4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4cU-cd-fHF"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <color key="tintColor" red="0.0" green="0.0036726334650000001" blue="0.12951343909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="messageToSend" destination="3Fi-4o-q22" id="A5i-GS-VjN"/>
+                        <outlet property="tableView" destination="b8a-Hq-NeK" id="qSk-Fk-unb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KtX-Qy-cUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

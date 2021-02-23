@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA8739BC25E47E8400C3240B /* UIViewController in Sources */ = {isa = PBXBuildFile; fileRef = BA8739BB25E47E8400C3240B /* UIViewController */; };
+		BA8739BF25E47E9700C3240B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8739BE25E47E9700C3240B /* LoginViewController.swift */; };
+		BA8739C225E47EAE00C3240B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8739C125E47EAE00C3240B /* ChatViewController.swift */; };
+		BA8739C925E49D8D00C3240B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8739C825E49D8D00C3240B /* RegisterViewController.swift */; };
 		BAACA5FC25E466F7001761B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACA5FB25E466F7001761B1 /* AppDelegate.swift */; };
 		BAACA5FE25E466F7001761B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */; };
 		BAACA60025E466F7001761B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACA5FF25E466F7001761B1 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA8739BB25E47E8400C3240B /* UIViewController */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIViewController; sourceTree = "<group>"; };
+		BA8739BE25E47E9700C3240B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BA8739C125E47EAE00C3240B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BA8739C825E49D8D00C3240B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BAACA5F825E466F7001761B1 /* Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAACA5FB25E466F7001761B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,11 +66,15 @@
 			children = (
 				BAACA5FB25E466F7001761B1 /* AppDelegate.swift */,
 				BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */,
-				BAACA5FF25E466F7001761B1 /* ViewController.swift */,
 				BAACA60125E466F7001761B1 /* Main.storyboard */,
+				BAACA5FF25E466F7001761B1 /* ViewController.swift */,
+				BA8739BB25E47E8400C3240B /* UIViewController */,
+				BA8739BE25E47E9700C3240B /* LoginViewController.swift */,
+				BA8739C125E47EAE00C3240B /* ChatViewController.swift */,
 				BAACA60425E466F8001761B1 /* Assets.xcassets */,
 				BAACA60625E466F8001761B1 /* LaunchScreen.storyboard */,
 				BAACA60925E466F8001761B1 /* Info.plist */,
+				BA8739C825E49D8D00C3240B /* RegisterViewController.swift */,
 			);
 			path = "Chat-App";
 			sourceTree = "<group>";
@@ -139,7 +151,11 @@
 			files = (
 				BAACA60025E466F7001761B1 /* ViewController.swift in Sources */,
 				BAACA5FC25E466F7001761B1 /* AppDelegate.swift in Sources */,
+				BA8739C925E49D8D00C3240B /* RegisterViewController.swift in Sources */,
 				BAACA5FE25E466F7001761B1 /* SceneDelegate.swift in Sources */,
+				BA8739BF25E47E9700C3240B /* LoginViewController.swift in Sources */,
+				BA8739C225E47EAE00C3240B /* ChatViewController.swift in Sources */,
+				BA8739BC25E47E8400C3240B /* UIViewController in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
