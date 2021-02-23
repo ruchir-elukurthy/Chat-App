@@ -20,6 +20,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var userPassword: UITextField!
     
     @IBAction func registerButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToChat", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goToChat") {
+            let destVC = segue.destination as! ChatViewController
+        }
+    }
 }

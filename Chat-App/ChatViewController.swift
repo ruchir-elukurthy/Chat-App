@@ -19,7 +19,11 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageToSend: UITextField!
     
     @IBAction func goButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToChat", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! ChatViewController
+    }
 
 }
