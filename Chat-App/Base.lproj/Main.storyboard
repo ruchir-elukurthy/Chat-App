@@ -99,7 +99,7 @@
                     <connections>
                         <outlet property="userEmailAddress" destination="AfD-U9-e4f" id="9Jf-Zb-81j"/>
                         <outlet property="userPassword" destination="S2D-il-oVE" id="bhC-yP-Wdh"/>
-                        <segue destination="8of-Lc-qsx" kind="presentation" identifier="goToChat" id="3hk-Fc-6wu"/>
+                        <segue destination="8of-Lc-qsx" kind="show" identifier="goToChat" id="nQG-rc-ejM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhb-iT-vx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -145,7 +145,7 @@
                     <connections>
                         <outlet property="userEmailAddress" destination="nla-8j-9jD" id="T29-jq-nyp"/>
                         <outlet property="userPassword" destination="Eiy-1v-uet" id="wNh-qm-rNc"/>
-                        <segue destination="8of-Lc-qsx" kind="presentation" identifier="goToChat" id="exu-7v-JOh"/>
+                        <segue destination="8of-Lc-qsx" kind="show" identifier="goToChat" id="ey5-O3-drl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twX-nw-9Vu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,37 +157,48 @@
             <objects>
                 <viewController id="8of-Lc-qsx" customClass="ChatViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aHU-e8-bOx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-Hq-NeK">
-                                <rect key="frame" x="20" y="44" width="374" height="710"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexColor" systemColor="labelColor"/>
-                            </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="3Fi-4o-q22">
-                                <rect key="frame" x="20" y="755" width="316" height="53"/>
+                                <rect key="frame" x="20" y="760" width="316" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.053815343619999997" green="0.032618703630000002" blue="0.12951343909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-ni-Vbw">
-                                <rect key="frame" x="337" y="755" width="57" height="53"/>
+                                <rect key="frame" x="337" y="760" width="57" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Go">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="goButton:" destination="8of-Lc-qsx" eventType="touchUpInside" id="IQP-g1-pv4"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-Hq-NeK">
+                                <rect key="frame" x="20" y="45" width="374" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexColor" systemColor="labelColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4cU-cd-fHF"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                        <color key="tintColor" red="0.0" green="0.0036726334650000001" blue="0.12951343909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="MUM-Tb-4yh">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="07w-T4-155">
+                            <connections>
+                                <action selector="logOutPress:" destination="8of-Lc-qsx" id="LCu-kD-a9I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="messageToSend" destination="3Fi-4o-q22" id="A5i-GS-VjN"/>
                         <outlet property="tableView" destination="b8a-Hq-NeK" id="qSk-Fk-unb"/>
@@ -195,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KtX-Qy-cUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3027.536231884058" y="91.741071428571431"/>
+            <point key="canvasLocation" x="3937.68115942029" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Uf-hW-Ry7">
@@ -222,7 +233,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="3hk-Fc-6wu"/>
+        <segue reference="nQG-rc-ejM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Firebase
+import CLTypingLabel
 
 class ChatViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Chat App"
+        navigationItem.setHidesBackButton(true, animated: false)
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var tableView: UITableView!
@@ -27,5 +29,14 @@ class ChatViewController: UIViewController {
     }
     
     
-
+    @IBAction func logOutPress(_ sender: UIBarButtonItem) {
+        let firebaseAuth = Auth.auth()
+        navigationController?.popToRootViewController(animated: true)
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+    }
+    
 }
