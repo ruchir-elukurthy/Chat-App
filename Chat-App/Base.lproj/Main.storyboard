@@ -72,19 +72,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="AfD-U9-e4f">
-                                <rect key="frame" x="89" y="121" width="242" height="34"/>
+                                <rect key="frame" x="86" y="184" width="242" height="45.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2D-il-oVE">
-                                <rect key="frame" x="89" y="202" width="242" height="34"/>
+                                <rect key="frame" x="86" y="272" width="242" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaT-Zm-cre">
-                                <rect key="frame" x="146" y="284" width="122" height="49"/>
+                                <rect key="frame" x="133" y="386" width="148" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <state key="normal" title="Register">
@@ -96,10 +96,11 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNx-vU-lkd"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="backgroundColor" red="1" green="0.97125176639982591" blue="0.99135829104509054" alpha="0.89803921568627454" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="0No-CR-3O5"/>
                     <connections>
+                        <outlet property="registerOutlet" destination="jaT-Zm-cre" id="mfh-LQ-ikh"/>
                         <outlet property="userEmailAddress" destination="AfD-U9-e4f" id="9Jf-Zb-81j"/>
                         <outlet property="userPassword" destination="S2D-il-oVE" id="bhC-yP-Wdh"/>
                         <segue destination="8of-Lc-qsx" kind="show" identifier="goToChat" id="nQG-rc-ejM"/>
@@ -117,20 +118,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nla-8j-9jD">
-                                <rect key="frame" x="108" y="121" width="198" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eiy-1v-uet">
-                                <rect key="frame" x="108" y="202" width="198" height="34"/>
+                                <rect key="frame" x="91" y="274" width="232" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsp-iX-0jh">
-                                <rect key="frame" x="169" y="279" width="78" height="48"/>
+                                <rect key="frame" x="155" y="388" width="99" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Login">
@@ -140,12 +135,19 @@
                                     <action selector="userlLogin:" destination="rD0-OJ-8cn" eventType="touchUpInside" id="zRv-vU-qlg"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nla-8j-9jD">
+                                <rect key="frame" x="91" y="186" width="232" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ms-2Q-2nB"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZCN-Ef-K7s"/>
                     <connections>
+                        <outlet property="loginOutlet" destination="zsp-iX-0jh" id="JlK-zc-R1G"/>
                         <outlet property="userEmailAddress" destination="nla-8j-9jD" id="T29-jq-nyp"/>
                         <outlet property="userPassword" destination="Eiy-1v-uet" id="wNh-qm-rNc"/>
                         <segue destination="8of-Lc-qsx" kind="show" identifier="goToChat" id="ey5-O3-drl"/>
@@ -188,11 +190,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-ni-Vbw">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-ni-Vbw">
                                 <rect key="frame" x="337" y="813" width="57" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Go">
+                                <state key="normal" image="paperplane" catalog="system">
                                     <color key="titleColor" systemColor="linkColor"/>
                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                 </state>
@@ -247,9 +248,10 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="ey5-O3-drl"/>
+        <segue reference="nQG-rc-ejM"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

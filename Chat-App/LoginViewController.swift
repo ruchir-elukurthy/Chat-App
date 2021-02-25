@@ -10,10 +10,14 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        title = "Chat App"
+        loginOutlet.layer.cornerRadius = 8
+        loginOutlet.layer.borderWidth = 2
+        loginOutlet.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
     }
     @IBOutlet weak var userEmailAddress: UITextField!
     

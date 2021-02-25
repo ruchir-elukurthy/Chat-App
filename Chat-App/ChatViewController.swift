@@ -7,15 +7,21 @@
 
 import UIKit
 import Firebase
-import CLTypingLabel
 
 class ChatViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Chat App"
         navigationItem.setHidesBackButton(true, animated: false)
-        // Do any additional setup after loading the view.
     }
+    
+    var messages: [message] = [
+        message(sender: "abcd@pqr.com",content: "hello world"),
+        message(sender:"xyz@pqr.com",content:"bye world")
+    ]
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var messageToSend: UITextField!

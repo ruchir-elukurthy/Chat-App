@@ -11,6 +11,7 @@
 		BA8739C225E47EAE00C3240B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8739C125E47EAE00C3240B /* ChatViewController.swift */; };
 		BA8739C925E49D8D00C3240B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8739C825E49D8D00C3240B /* RegisterViewController.swift */; };
 		BA8739D625E4F5C200C3240B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA8739D525E4F5C200C3240B /* GoogleService-Info.plist */; };
+		BA8739FF25E70FD000C3240B /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8739FE25E70FD000C3240B /* Messages.swift */; };
 		BAACA5FC25E466F7001761B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACA5FB25E466F7001761B1 /* AppDelegate.swift */; };
 		BAACA5FE25E466F7001761B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */; };
 		BAACA60025E466F7001761B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACA5FF25E466F7001761B1 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		BA8739C125E47EAE00C3240B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BA8739C825E49D8D00C3240B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BA8739D525E4F5C200C3240B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA8739FE25E70FD000C3240B /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		BAACA5F825E466F7001761B1 /* Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAACA5FB25E466F7001761B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				BA8739D525E4F5C200C3240B /* GoogleService-Info.plist */,
 				BAACA60925E466F8001761B1 /* Info.plist */,
 				BA8739C825E49D8D00C3240B /* RegisterViewController.swift */,
+				BA8739FE25E70FD000C3240B /* Messages.swift */,
 			);
 			path = "Chat-App";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				BAACA60025E466F7001761B1 /* ViewController.swift in Sources */,
 				BAACA5FC25E466F7001761B1 /* AppDelegate.swift in Sources */,
 				BA8739C925E49D8D00C3240B /* RegisterViewController.swift in Sources */,
+				BA8739FF25E70FD000C3240B /* Messages.swift in Sources */,
 				BAACA5FE25E466F7001761B1 /* SceneDelegate.swift in Sources */,
 				BA8739BF25E47E9700C3240B /* LoginViewController.swift in Sources */,
 				BA8739C225E47EAE00C3240B /* ChatViewController.swift in Sources */,
