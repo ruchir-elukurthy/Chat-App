@@ -15,6 +15,7 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self;
         title = "Chat App"
         navigationItem.setHidesBackButton(true, animated: false)
+        tableView.register(UINib(data: <#T##Data#>, bundle: <#T##Bundle?#>), 
     }
     
     var messages: [message] = [
