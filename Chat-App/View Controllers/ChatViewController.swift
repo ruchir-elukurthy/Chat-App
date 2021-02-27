@@ -12,7 +12,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.dataSource = self;
         title = "Chat App"
         navigationItem.setHidesBackButton(true, animated: false)
     }
@@ -30,11 +30,6 @@ class ChatViewController: UIViewController {
         performSegue(withIdentifier: "goToChat", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! ChatViewController
-    }
-    
-    
     @IBAction func logOutPress(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
         navigationController?.popToRootViewController(animated: true)
@@ -45,4 +40,19 @@ class ChatViewController: UIViewController {
         }
     }
     
+    
+}
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count;
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
+        cell.textLabel?.text = messages[indexPath.row].content
+        return cell;
+    }
+
+
 }

@@ -61,6 +61,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BA57FE9725EA1EB1001C01C7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA8739C825E49D8D00C3240B /* RegisterViewController.swift */,
+				BA8739C125E47EAE00C3240B /* ChatViewController.swift */,
+				BA8739BE25E47E9700C3240B /* LoginViewController.swift */,
+				BAACA5FF25E466F7001761B1 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BA57FE9825EA1ED4001C01C7 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				BA8739FE25E70FD000C3240B /* Messages.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		BA57FE9925EA1EF2001C01C7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BAACA60625E466F8001761B1 /* LaunchScreen.storyboard */,
+				BAACA60125E466F7001761B1 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BA57FE9A25EA1F1B001C01C7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */,
+				BAACA5FB25E466F7001761B1 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		BAACA5EF25E466F7001761B1 = {
 			isa = PBXGroup;
 			children = (
@@ -82,18 +119,13 @@
 		BAACA5FA25E466F7001761B1 /* Chat-App */ = {
 			isa = PBXGroup;
 			children = (
-				BAACA5FB25E466F7001761B1 /* AppDelegate.swift */,
-				BAACA5FD25E466F7001761B1 /* SceneDelegate.swift */,
-				BAACA60125E466F7001761B1 /* Main.storyboard */,
-				BAACA5FF25E466F7001761B1 /* ViewController.swift */,
-				BA8739BE25E47E9700C3240B /* LoginViewController.swift */,
-				BA8739C125E47EAE00C3240B /* ChatViewController.swift */,
+				BA57FE9A25EA1F1B001C01C7 /* Delegates */,
+				BA57FE9925EA1EF2001C01C7 /* Storyboard */,
+				BA57FE9825EA1ED4001C01C7 /* Message */,
+				BA57FE9725EA1EB1001C01C7 /* View Controllers */,
 				BAACA60425E466F8001761B1 /* Assets.xcassets */,
-				BAACA60625E466F8001761B1 /* LaunchScreen.storyboard */,
 				BA8739D525E4F5C200C3240B /* GoogleService-Info.plist */,
 				BAACA60925E466F8001761B1 /* Info.plist */,
-				BA8739C825E49D8D00C3240B /* RegisterViewController.swift */,
-				BA8739FE25E70FD000C3240B /* Messages.swift */,
 			);
 			path = "Chat-App";
 			sourceTree = "<group>";
