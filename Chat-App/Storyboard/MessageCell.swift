@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class MessageCell: UITableViewCell {
 
@@ -13,6 +14,9 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var senderName: UILabel!
     @IBOutlet weak var messageContent: UILabel!
     override func awakeFromNib() {
+        
+        senderName.layer.cornerRadius = 5
+        senderName.layer.masksToBounds = true
         super.awakeFromNib()
         // Initialization code
     }

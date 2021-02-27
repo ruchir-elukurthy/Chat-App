@@ -15,7 +15,7 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self;
         title = "Chat App"
         navigationItem.setHidesBackButton(true, animated: false)
-        tableView.register(UINib(data: <#T##Data#>, bundle: <#T##Bundle?#>), 
+        tableView.register(UINib(nibName:"MessageCell", bundle: nil), forCellReuseIdentifier: "reuseableCell")
     }
     
     var messages: [message] = [
@@ -28,17 +28,13 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageToSend: UITextField!
     
     @IBAction func goButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToChat", sender: self)
     }
     
     @IBAction func logOutPress(_ sender: UIBarButtonItem) {
-        let firebaseAuth = Auth.auth()
-        navigationController?.popToRootViewController(animated: true)
-        do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
+        do { try Auth.auth().signOut() }
+            catch { print("already logged out") }
+            
+            navigationController?.popToRootViewController(animated: true)
     }
     
     
@@ -50,8 +46,9 @@ extension ChatViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row].content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseableCell", for: indexPath) as! MessageCell
+        cell.messageContent.text = messages[indexPath.row].content
+        cell.senderName.text = messages[indexPath.row].sender
         return cell;
     }
 
