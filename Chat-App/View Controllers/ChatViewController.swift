@@ -10,6 +10,8 @@ import Firebase
 
 class ChatViewController: UIViewController {
     
+    let db = Firestore.firestore();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self;
@@ -28,6 +30,18 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageToSend: UITextField!
     
     @IBAction func goButton(_ sender: UIButton) {
+        if let messageSend = messageToSend.text , let messageSenderEmail = Auth.auth().currentUser?.email {
+            db.collection("messages").addDocument(data: [
+                "sender": messageSenderEmail,
+                "content": messageSend])
+            { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added")
+                }
+            }
+        }
     }
     
     @IBAction func logOutPress(_ sender: UIBarButtonItem) {

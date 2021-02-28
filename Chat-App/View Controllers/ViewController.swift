@@ -8,6 +8,7 @@
 import UIKit
 import CLTypingLabel
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var chatAppLabel: CLTypingLabel!
