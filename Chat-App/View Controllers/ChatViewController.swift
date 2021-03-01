@@ -67,7 +67,6 @@ class ChatViewController: UIViewController {
             } else {
                 self.messages = []
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
                     let data = document.data()
                     if let content = data["content"] as? String, let sender = data["sender"] as? String {
                         let newMessage = message(sender: sender, content: content)
