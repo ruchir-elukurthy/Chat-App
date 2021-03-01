@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-import IQKeyboardManagerSwift
 
 class ChatViewController: UIViewController {
     
@@ -30,6 +29,9 @@ class ChatViewController: UIViewController {
     
     @IBAction func goButton(_ sender: UIButton) {
         if let messageSend = messageToSend.text , let messageSenderEmail = Auth.auth().currentUser?.email {
+            if(textFieldShouldEndEditing(messageToSend) == false) {
+                return;
+            }
             db.collection("messages").addDocument(data: [
                 "sender": messageSenderEmail,
                 "content": messageSend,
@@ -43,6 +45,19 @@ class ChatViewController: UIViewController {
                 }
             }
         }
+        textFieldDidEndEditing(messageToSend)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        messageToSend.text = ""
+        return;
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if(messageToSend.text == "") {
+            return false;
+        }
+        return true;
     }
     
     func loadMessages() {
@@ -66,14 +81,13 @@ class ChatViewController: UIViewController {
         }
     }
     
+    
     @IBAction func logOutPress(_ sender: UIBarButtonItem) {
         do { try Auth.auth().signOut() }
             catch { print("already logged out") }
             
             navigationController?.popToRootViewController(animated: true)
     }
-    
-    
 }
 
 extension ChatViewController: UITableViewDataSource {
@@ -81,12 +95,11 @@ extension ChatViewController: UITableViewDataSource {
         return messages.count;
     }
 
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseableCell", for: indexPath) as! MessageCell
         cell.messageContent.text = messages[indexPath.row].content
         cell.senderName.text = messages[indexPath.row].sender
         return cell;
     }
-
-
 }

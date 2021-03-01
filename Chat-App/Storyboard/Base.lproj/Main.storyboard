@@ -235,9 +235,7 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="KzX-Xu-Cfw">
-            <size key="intrinsicContentSize" width="144.5" height="39.5"/>
-        </designable>
+        <designable name="KzX-Xu-Cfw"/>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="nQG-rc-ejM"/>

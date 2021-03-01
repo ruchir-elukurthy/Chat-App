@@ -8,6 +8,6 @@ target 'Chat-App' do
   pod 'CLTypingLabel', '~> 0.4.0'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'IQKeyboardManager'
+  pod 'IQKeyboardManagerSwift'
 
 end
