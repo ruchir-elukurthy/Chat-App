@@ -2047,7 +2047,7 @@ Fuller's blog&lt;/a&gt;
 			<key>FooterText</key>
 			<string>MIT License
 
-Copyright (c) 2019 Nick Fox
+Copyright (c) 2013-2017 Iftekhar Qurashi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -2070,7 +2070,7 @@ SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>KeyboardObserving</string>
+			<string>IQKeyboardManager</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

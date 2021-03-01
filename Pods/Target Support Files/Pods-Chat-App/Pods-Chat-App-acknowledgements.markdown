@@ -1972,11 +1972,11 @@ More information at <a href="http://landonf.org/2009/02/index.html">Landon
 Fuller's blog</a>
 
 
-## KeyboardObserving
+## IQKeyboardManager
 
 MIT License
 
-Copyright (c) 2019 Nick Fox
+Copyright (c) 2013-2017 Iftekhar Qurashi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

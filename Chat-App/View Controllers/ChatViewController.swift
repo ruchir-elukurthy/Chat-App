@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import KeyboardObserving
 
 class ChatViewController: UIViewController {
     
