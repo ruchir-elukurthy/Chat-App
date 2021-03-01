@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-import KeyboardObserving
+import IQKeyboardManagerSwift
 
 class ChatViewController: UIViewController {
     
